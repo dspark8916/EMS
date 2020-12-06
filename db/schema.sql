@@ -5,7 +5,7 @@ USE employees;
 
 CREATE TABLE department (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
+  name VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE role (
@@ -13,7 +13,7 @@ CREATE TABLE role (
   title VARCHAR(100) NOT NULL,
   salary DECIMAL(10,4) NULL,
   department_id INT NULL,
-  FOREIGN KEY(department_id) REFERENCES department TABLE on DELETE CASCADE
+  FOREIGN KEY(department_id) REFERENCES department(id) on DELETE CASCADE
 );
 
 CREATE TABLE employee (
@@ -22,6 +22,6 @@ CREATE TABLE employee (
   last_name VARCHAR(100) NOT NULL,
   role_id INT NOT NULL,
   manager_id INT NOT NULL,
-  FOREIGN KEY(role_id) REFERENCES role TABLE on DELETE CASCADE,
-  FOREIGN KEY(manager_id) REFERENCES employee TABLE on DELETE CASCADE
+  FOREIGN KEY(role_id) REFERENCES role(id) on DELETE CASCADE,
+  FOREIGN KEY(manager_id) REFERENCES employee(id) on DELETE CASCADE
 );
