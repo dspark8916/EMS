@@ -26,7 +26,7 @@ So that I can organize and plan my business
 
 ## Usage
 
-
+The intended use of this application is to allow a company to organize and view the departments, roles, and employees in their company. This will allow them to plan and properly run their business. 
 
 ## Contributing
 
