@@ -34,7 +34,8 @@ class DB {
   updateEmployeeRole(employeeId, roleId) {
     return this.connection.query(
       // YOUR CODE HERE
-      'UPDATE employee Set role_id = ${roleId} WHERE id = ${employeeId}'
+      'UPDATE employee SET role_id = ? WHERE id = ?',
+      [employeeId, roleId]
     );
   }
 
